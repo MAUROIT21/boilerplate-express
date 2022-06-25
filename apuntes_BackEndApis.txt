@@ -1,0 +1,22 @@
+*** Middleware ***
+
+
++ Middleware functions are functions that take 3 arguments: the request object, the response object, and the next function in the application's request-response cycle.
++ These functions execute some code that may have side effects in the application, and typically add information to the request or response objects.
++ They can also end the loop by sending a response when some condition is met
++ If they don't send the response when they're done, they start execution of the next function on the execution stack. This causes the third argument, , to be called next().
+
+
+++ BODY PARSER / POST
++ To parse data from POST requests, you have to install the body-parser. This package allows you to use a series of middleware, which can decode data in different formats.
+
++ bodyParser.urlencoded("Returns middleware that only parses urlencoded bodies and only looks at requests where the Content-Type header matches the type option")
+
+++ Post request:
+In this type of request, the data does not appear in the URL, it is hidden in the body of the request. The body is part of the HTTP request, also called the payload. Although the data is not visible in the URL, this does not mean that it is private.
+
+++ HTTP METHODS AND PAYLOAD:
+Except for GET, all the other methods mentioned above can have a payload (that is, the data in the body of the request).
+The body-parser middleware also works with these methods.
+
+++ 

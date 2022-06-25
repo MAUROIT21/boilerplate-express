@@ -1,0 +1,4 @@
+1) Instarlar Nodemon (npm install nodemon)
+2) Iniciar nodemon y automticamente el server de la app:
+    npm start
+    
